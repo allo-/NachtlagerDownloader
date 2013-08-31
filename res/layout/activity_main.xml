@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <android.widget.DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <Switch
+        android:id="@+id/hqSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/datePicker"
+        android:layout_below="@+id/datePicker"
+        android:checked="true"
+        android:textOff="LQ"
+        android:textOn="HQ" />
+
+    <TextView
+        android:id="@+id/thanksText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/downloadButton"
+        android:layout_below="@+id/downloadButton"
+        android:linksClickable="true"
+        android:text="Thanks" />
+
+    <TextView
+        android:id="@+id/textWeekday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hqSwitch"
+        android:layout_below="@+id/hqSwitch"
+        android:text="Weekday" />
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textWeekday"
+        android:layout_below="@+id/textWeekday"
+        android:text="ErrorMessage"
+        android:textColor="#ff0000" />
+
+    <Button
+        android:id="@+id/downloadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/errorMessage"
+        android:layout_below="@+id/errorMessage"
+        android:onClick="startDownload"
+        android:text="Download" />
+
+</RelativeLayout>
